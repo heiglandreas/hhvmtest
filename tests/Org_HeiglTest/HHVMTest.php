@@ -37,14 +37,19 @@ class HHVMTest extends \PHPUnit_Framework_TestCase
 {
     public function testMockingFinfo()
     {
+        $ref = new \ReflectionClass('\finfo');
+        print_r($ref->getConstructor()->getParameters());
+
         $mock = M::mock('\finfo');
 
         $this->assertTrue(true);
     }
+
     public function testMockingFInfoWithPHPUnit()
     {
         $mock = $this->getMock('\finfo');
 
         $this->assertTrue(true);
     }
+
 }
