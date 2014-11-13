@@ -35,9 +35,15 @@ use Mockery as M;
 
 class HHVMTest extends \PHPUnit_Framework_TestCase
 {
-    public function testMockingSPLFIleInfo()
+    public function testMockingFinfo()
     {
         $mock = M::mock('\finfo');
+
+        $this->assertTrue(true);
+    }
+    public function testMockingFInfoWithPHPUnit()
+    {
+        $mock = $this->getMock('\finfo');
 
         $this->assertTrue(true);
     }
