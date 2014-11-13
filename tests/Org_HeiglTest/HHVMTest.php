@@ -37,8 +37,12 @@ class HHVMTest extends \PHPUnit_Framework_TestCase
 {
     public function testMockingFinfo()
     {
+        echo "\n";
         $ref = new \ReflectionClass('\finfo');
         print_r($ref->getConstructor()->getParameters());
+        $re2 = new \ReflectionClass('\SPLFileInfo');
+        print_r($re2->getConstructor()->getParameters());
+        echo "\n";
 
         $mock = M::mock('\finfo');
 
